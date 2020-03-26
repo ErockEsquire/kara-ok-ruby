@@ -1,0 +1,6 @@
+<div id="centerhead"><h1 class="kara">KARA-OK!</h1></div>
+<%= form_for @playlist do |f| %>
+  <%= f.label "Playlist Name:" %>
+  <%= f.text_field :name %><br>
+  <%= f.submit 'Create' %>
+<% end %>

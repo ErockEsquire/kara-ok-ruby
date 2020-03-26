@@ -1,0 +1,24 @@
+<div class="playlists_background">
+<div id="centerhead"><h1 class="kara">KARA-OK!</h1></div>
+<h1>Songs from all Playlists</h1>
+
+<h3>Add Song to Repetoire</h3>
+<%= form_tag add_to_songs_path do %>
+  <label>Artist </label><%= text_field_tag :artist %>
+  Title <%= text_field_tag :title %>
+  <%= submit_tag "Add Song" %>
+<% end %>
+<br>
+
+<% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+<% end %>
+
+<% @playlist_songs.each do |playlist_song| %>
+  <ul>
+    <li><%= link_to "#{playlist_song.song.artist} - #{playlist_song.song.title} || Playlist: #{playlist_song.playlist.name}", song_path(playlist_song.song.id) %></li>
+  </ul>
+<% end %>
+
+<br></br>
+</div>

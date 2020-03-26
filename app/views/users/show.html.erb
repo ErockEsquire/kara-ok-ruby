@@ -1,0 +1,20 @@
+<h2><%= link_to 'Playlists', playlists_path %>
+
+<div id="centerhead"><h1 class="kara">KARA-OK!</h1></div>
+
+<h2><%= link_to 'Songs', songs_path %>
+
+<h3>Playlists</h3>
+
+<% @user.playlists.each do |playlist| %>
+
+<h4><%= link_to "#{playlist.name}", playlist_path(playlist) %></h4>
+  <ul>
+    <% playlist.songs[0..9].each do |song| %>
+      <li><%= link_to "#{song.artist} - #{song.title}", song_path(song) %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h3><%= link_to 'Create Playlist', new_playlist_path %></h3>
+<h3><%= link_to 'Search Song', new_song_path %></h3>

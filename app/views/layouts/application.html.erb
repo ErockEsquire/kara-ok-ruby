@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FlatironModTwoProjectRails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Mukta&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+  <header>
+    <%= link_to 'Playlists', playlists_path %> | 
+    <%= link_to 'Songs', playlist_songs_path %>
+  </header>
+    <div class="body"><%= yield %></div>
+  </body>
+</html>

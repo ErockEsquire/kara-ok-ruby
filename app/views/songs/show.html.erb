@@ -1,0 +1,18 @@
+<div class="song_background">
+<div class="show_title"><h1><%= @song.artist %> - <%= @song.title %></h1></div>
+  <div class="edit_song"><%= link_to "Edit Song", edit_song_path(@song) %></div>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="lyrics_show"><%= @song.lyrics.gsub(/[\r\n]+/, '<br><br>').html_safe %></div>
+    <div id="video">
+      <% if @song.video_url.blank? == false %>
+        <iframe id="iframe_main" width="560" height="315" src="https://www.youtube.com/embed/<%= @song.video_url.match(/\w+$/).to_s %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <% end %>
+    </div>
+  </div>
+<br></br>
+<br></br>
+</div>
+

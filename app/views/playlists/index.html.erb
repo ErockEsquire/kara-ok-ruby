@@ -1,0 +1,26 @@
+<div class="playlists_background">
+
+<div id="centerhead"><h1 class="kara">KARA-OK!</h1></div>
+<h1>Playlists</h1>
+<h3>Create New Playlist</h3>
+<%= form_for @playlist do |f| %>
+  <%= f.label "Playlist Name" %>
+  <%= f.text_field :name %>
+
+  <%= f.collection_select :user_id, User.all, :id, :username %>
+  <%= f.submit 'Create Playlist' %>
+<% end %>
+
+<br>
+<% @playlists.each do |playlist| %>
+    <h4><%= link_to "#{playlist.name}", playlist_path(playlist) %></h4>
+      <% playlist.songs[0..2].each do |song| %>
+      <ul>
+        <li><%= link_to "#{song.artist} - #{song.title}", song_path(song) %></li>
+      </ul>
+      <% end %>
+      <br>
+<% end %>
+
+<br></br>
+</div>
