@@ -1,7 +1,7 @@
 <div class="playlists_background">
 
-<div id="centerhead"><h1 class="kara">KARA-OK!</h1></div>
-<h1>Playlists</h1>
+<h1 class="kara">KARA-OK!</h1>
+<div id="playlisthead"><h1>Playlists |</h1><h2><%= link_to "Playlist Songs", playlist_songs_path %></h2></div>
 <h3>Create New Playlist</h3>
 <%= form_for @playlist do |f| %>
   <%= f.label "Playlist Name" %>
