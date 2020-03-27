@@ -1,33 +1,38 @@
 <div id="centerhead"><h1 class="kara">KARA-OK!</h1></div>
 <div class="playlist_background">
-<h1><%= @playlist.name %></h1>
-<h3>Add Song to Playlist</h3>
-<%= form_tag add_to_playlist_path(@playlist.id) do %>
-  <label>Artist <%= text_field_tag :artist %>
-  Title <%= text_field_tag :title %>
-  <% hidden_field_tag :playlist_id, @playlist.id %>
-  <%= submit_tag "Add Song", class: "button" %>
-<% end %>
+
+  <h1><%= @playlist.name %></h1>
+  <h3>Add Song to Playlist</h3>
+    <%= form_tag add_to_playlist_path(@playlist.id) do %>
+      <label>Artist <%= text_field_tag :artist %>
+        Title <%= text_field_tag :title %>
+        <% hidden_field_tag :playlist_id, @playlist.id %>
+      <%= submit_tag "Add Song", class: "button" %>
+    <% end %>
 <br>
 <br>
 
 <% if flash[:alert] %>
-    <div class="alert"><%= flash[:alert] %></div>
+  <div class="alert"><%= flash[:alert] %></div>
 <% end %>
 
 <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
+  <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 
-<h3>Songs</h3>
-
-<% @playlist.songs.each do |song| %>
-  <ul>
-    <li><%= link_to "#{song.artist} - #{song.title}", "/songs/#{song.id}/#{@playlist.id}", method: "get" %></li>
-    <%= button_to "Remove Song", "/playlist_songs/#{@playlist.id}/#{song.id}", method: :delete, data: {confirm: "Are you sure you want to remove?" }, class: "button" %>
-  </ul>
+<% if @playlist.songs == [] %>
+  <h3>No Songs</h3>
+<% else %>
+  <h3>Songs</h3>
+  <% @playlist.songs.each do |song| %>
+    <ul>
+      <li><%= link_to "#{song.artist} - #{song.title}", "/songs/#{song.id}/#{@playlist.id}", method: "get" %></li>
+      <%= button_to "Remove Song", "/playlist_songs/#{@playlist.id}/#{song.id}", method: :delete, data: {confirm: "Are you sure you want to remove?" }, class: "button" %>
+    </ul>
+  <% end %>
 <% end %>
 
+<br></br>
 <br></br>
 <%= button_to 'Delete Playlist', playlist_path(@playlist), data: {:confirm => 'Are you sure?'}, :method => :delete, data: {confirm: "Are you sure you want to remove?" }, class: "delete_button" %>
 

@@ -10,7 +10,12 @@
   <%= f.collection_select :user_id, User.all, :id, :username, class: "profile_select" %>
   <%= f.submit 'Create Playlist', class: "button" %>
 <% end %>
-
+<br>
+<% if @playlist.errors.any? %>
+  <div class="error" %>
+    <%= @playlist.errors[:name].first %>
+  </div>
+  <% end %>
 <br>
 <% @playlists.each do |playlist| %>
     <h4><%= link_to "#{playlist.name}", playlist_path(playlist) %></h4>

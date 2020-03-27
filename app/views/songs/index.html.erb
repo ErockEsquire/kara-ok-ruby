@@ -17,7 +17,9 @@
 <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
 <% end %>
-
+<br>
+<%= button_to "Sort by Artist", sort_artist_path, method: "post", class: "button" %>
+<%= button_to "Sort by Title", sort_title_path, method: "post", class: "button" %>
 <% @songs.each do |song| %>
   <ul>
     <li><%= link_to "#{song.artist} - #{song.title}", song_path(song) %></li>

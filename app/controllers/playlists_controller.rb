@@ -14,11 +14,12 @@ class PlaylistsController < ApplicationController
   end
 
   def create
+    @playlists = Playlist.all
     @playlist = Playlist.new(playlist_params)
     if @playlist.save
-      redirect_to @playlist
+      redirect_to playlist_path(@playlist)
     else
-      render :new
+      render :index
     end
   end
 

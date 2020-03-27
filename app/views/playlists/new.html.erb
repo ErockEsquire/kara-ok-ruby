@@ -1,9 +1,0 @@
-<div id="centerhead"><h1 class="kara">KARA-OK!</h1></div>
-<h2>
-<%= form_for @playlist do |f| %>
-  <%= f.label "Playlist Name" %>
-  <%= f.text_field :name %>
-
-  <%= f.collection_select :user_id, User.all, :id, :username %>
-  <%= f.submit 'Create' %>
-<% end %>

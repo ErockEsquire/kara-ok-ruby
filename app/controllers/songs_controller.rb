@@ -31,15 +31,20 @@ class SongsController < ApplicationController
     begin
       result = RestClient.get("https://api.lyrics.ovh/v1/#{artist.gsub(/\s/, "+")}/#{title.gsub(/\s/, "+")}")
     rescue RestClient::NotFound => e
-      flash[:alert] = " ¯\\(◉ω◉)/¯ Song was not found. Please try a different spelling, or a different song!"
+      flash[:alert] = " ¯\\(◉_◉)/¯ Song was not found. Please try a different spelling, or a different song!"
       redirect_to playlist_path(params[:playlist_id])
     else
       resp_hash = JSON.parse(result.body)
       lyrics = resp_hash["lyrics"]
-      @song = Song.find_or_create_by(title: title, artist: artist, lyrics: lyrics)
-      @playlist_song = PlaylistSong.find_or_create_by(playlist_id: params[:playlist_id], song_id: @song.id)
-      flash[:notice] = "(>ﾟヮﾟ)> Song has been added! <(ﾟヮﾟ<)"
-      redirect_to request.referrer
+      @song = Song.find_or_create_by(title: title, artist: artist)
+      if !PlaylistSong.find_by(playlist_id: params[:playlist_id], song_id: @song.id)
+        @playlist_song = PlaylistSong.create(playlist_id: params[:playlist_id], song_id: @song.id)
+        flash[:notice] = "(>ﾟヮﾟ)> Song has been added! <(ﾟヮﾟ<)"
+        redirect_to request.referrer
+      else
+        flash[:alert] = "(；￣ .￣）...this song is already in playlist!"
+        redirect_to request.referrer
+      end
     end
   end
 
@@ -49,15 +54,30 @@ class SongsController < ApplicationController
     begin
       result = RestClient.get("https://api.lyrics.ovh/v1/#{artist.gsub(/\s/, "+")}/#{title.gsub(/\s/, "+")}")
     rescue RestClient::NotFound => e
-      flash[:alert] = " ¯\\(◉ω◉)/¯ Song was not found. Please try a different spelling, or a different song!"
+      flash[:alert] = " ¯\\(◉_◉)/¯ Song was not found. Please try a different spelling, or a different song!"
       redirect_to songs_path
     else
       resp_hash = JSON.parse(result.body)
       lyrics = resp_hash["lyrics"]
-      @song = Song.find_or_create_by(title: title, artist: artist, lyrics: lyrics)
-      flash[:notice] = "(>ﾟヮﾟ)> Song has been added! <(ﾟヮﾟ<)"
-      redirect_to request.referrer
+      if !Song.find_by(title: title, artist: artist)
+        @song = Song.create(title: title, artist: artist, lyrics: lyrics)
+        flash[:notice] = "(>ﾟヮﾟ)> Song has been added! <( ﾟヮﾟ<)"
+        redirect_to request.referrer
+      else
+        flash[:alert] = "(；￣ .￣）...this song is already in the vault"
+        redirect_to request.referrer
+      end
     end
+  end
+
+  def sort_artist
+    @songs = Song.all.sort_by(&:artist)
+    render :index
+  end
+
+  def sort_title
+    @songs = Song.all.sort_by(&:title)
+    render :index
   end
 
   def destroy

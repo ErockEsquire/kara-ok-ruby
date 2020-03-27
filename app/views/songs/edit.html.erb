@@ -3,10 +3,9 @@
 <h1><%= @song.artist %> - <%= @song.title %></h1>
 <div class="edit_song"><%= link_to 'Return to Previous', song_path(@song) %></div>
 
+<br>
 <%= form_for @song do |f| %>
 
-  Artist <%= f.text_field :artist %><br>
-  Title <%= f.text_field :title %>
   <div class="edit_video">
     Youtube url <%= f.text_field :video_url %>
   </div>

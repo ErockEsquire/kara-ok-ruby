@@ -58,16 +58,18 @@ h1.kara{
   text-align: center;
   display: inline-block;
 }
+html, body{
+  min-height: 100%;
+}
 body{
   background-color: indianred;
   margin:0px;
   padding: 0px;
-}
-.body{
+  background-size: cover;
   font-size: 20px;
   font-family: 'Comfortaa', cursive;
-  background-color: blanchedalmond;
 }
+
 h1, h3{
    font-family: 'Bebas Neue', cursive;
    letter-spacing: 1.5px;
@@ -115,11 +117,15 @@ a:hover {
 }
 .delete_button{
   background-color: blanchedalmond;
+  display: flex;
   font-size: 15px;
   font-family: 'Sen', sans-serif;
   border-radius: 10px;
   box-shadow: 3px 3px;
   z-index: 0;
+  margin-top: 60px;
+  margin-bottom: 70px;
+  top: 50px;
 }
 
 .artist {
@@ -128,11 +134,13 @@ a:hover {
 .title {
   font-size: 20px;
 }
-.lyrics > textarea{
+textarea#song_lyrics{
     width: 50%;
-    height: 100vh;
     font-size: 20px;
-    display: inline block;
+    height: 100vh;
+    display: inline-flex;
+    resize: none;
+    background-color: blanchedalmond;
 }
 .lyrics_show{
   text-shadow: 1px 1px blanchedalmond;
@@ -152,6 +160,7 @@ a:hover {
   animation-duration: 3s;
   animation-name: slidein;
   text-align: center;
+  z-index: 2;
 }
 .notice{
   padding: 20px;
@@ -162,6 +171,7 @@ a:hover {
   animation-duration: 3s;
   animation-name: slidein;
   text-align: center;
+  z-index: 2;
 }
 
 @keyframes slidein {
@@ -209,12 +219,13 @@ a:hover {
 }
 .playlist_background{
   background-image: url(red_cassette.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-repeat: repeat;
+  background-size: cover;
   background-position: right top;
   background-attachment: fixed;
   height: 100%;
   overflow: hidden;
+
 }
 select#playlist_user_id{
   position: relative;
@@ -234,14 +245,14 @@ input#song_artist{
   font-size: 15px;
   position: relative;
   width: 30%;
-  left: 63px;
+  left: 64px;
   margin-top: 20px;
 }
 input#song_title{
   font-size: 15px;
   position: relative;
   width: 30%;
-  left: 75px;
+  left: 76px;
   margin-top: 5px;
 }
 input#song_video_url{
@@ -270,4 +281,17 @@ input.button{
 }
 h1{
   margin-bottom: 10px;
+}
+div.field_with_errors {
+  display: inline;
+}
+.error{
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  width: 100%;
+  animation-duration: 3s;
+  animation-name: slidein;
+  text-align: center;
+  z-index: 2;
 }
