@@ -6,7 +6,9 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
-    @playlist = Playlist.find(params[:playlist_id])
+    if !params[:playlist_id].blank?
+      @playlist = Playlist.find(params[:playlist_id])
+    end
   end
 
   def new

@@ -23,6 +23,7 @@ header{
   border-bottom: 1px solid black;
   position: sticky;
   top: 0;
+  z-index: 3;
   a:link{
     color: black;
   }
@@ -35,7 +36,7 @@ header{
 }
 
 .kara{
-  position: fixed;
+  position: absolute;
   top: 36px;
   left: 37.6%;
   background-color: white;
@@ -44,10 +45,14 @@ header{
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
+  z-index: 0;
+  opacity: .7;
 }
 h1.kara{
   font-size: 53px;
   font-family: 'Montserrat Subrayada', sans-serif;
+  z-index: 0;
+  opacity: .9;
 }
 .pole{
   text-align: center;
@@ -99,18 +104,14 @@ a:hover {
   font-style: italic;
   text-shadow: 1px 1px indianred;
 }
-a.header_playlist{
- 
-}
-a.header_song{
 
-}
 .button{
   background-color: white;
   font-size: 12px;
   font-family: 'Sen', sans-serif;
   border-radius: 10px;
   box-shadow: 3px 3px;
+  z-index: 0;
 }
 .delete_button{
   background-color: blanchedalmond;
@@ -118,6 +119,7 @@ a.header_song{
   font-family: 'Sen', sans-serif;
   border-radius: 10px;
   box-shadow: 3px 3px;
+  z-index: 0;
 }
 
 .artist {
@@ -174,6 +176,7 @@ a.header_song{
 }
 .button_to{
   margin-left: 40px;
+  z-index: 1;
 }
 
 #video {
@@ -229,18 +232,21 @@ select#playlist_user_id{
 
 input#song_artist{
   font-size: 15px;
+  position: relative;
   width: 30%;
-  margin-left: 47px;
+  left: 63px;
   margin-top: 20px;
 }
 input#song_title{
   font-size: 15px;
+  position: relative;
   width: 30%;
-  margin-left: 57px;
+  left: 75px;
   margin-top: 5px;
 }
 input#song_video_url{
   font-size: 15px;
+  position: relative;
   width: 30%;
   margin-top: 5px;
 }

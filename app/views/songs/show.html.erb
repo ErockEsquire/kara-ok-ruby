@@ -2,7 +2,9 @@
 <div class="show_title"><h1><%= @song.artist %> - <%= @song.title %></h1></div>
 <div class="edit_song"><%= link_to "Edit Song", edit_song_path(@song) %></div>
   <br>
-  <div class="edit_song"><%= link_to "Return to Playlist", playlist_path(@playlist) %></div>
+  <% if defined?(@playlist) %>
+    <div class="edit_song"><%= link_to "Return to Playlist", playlist_path(@playlist) %></div>
+  <% end %>
   <br>
   <div class="lyrics_container">
     <div class="lyrics_show"><%= @song.lyrics.gsub(/[\r\n]+/, '<br><br>').html_safe %></div>
@@ -13,6 +15,7 @@
     </div>
   </div>
 
+<br></br>
 <br></br>
   <%= button_to 'Delete Song', song_path(@song), data: {:confirm => 'Are you sure?'}, :method => :delete, data: {confirm: "Are you sure you want to remove?" }, class: "delete_button" %>
 <br></br>
