@@ -6,6 +6,7 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
+    @playlist = Playlist.find(params[:playlist_id])
   end
 
   def new
@@ -47,13 +48,20 @@ class SongsController < ApplicationController
       result = RestClient.get("https://api.lyrics.ovh/v1/#{artist.gsub(/\s/, "+")}/#{title.gsub(/\s/, "+")}")
     rescue RestClient::NotFound => e
       flash[:alert] = " ¯\\(◉ω◉)/¯ Song was not found. Please try a different spelling, or a different song!"
-      redirect_to playlist_songs_path
+      redirect_to songs_path
     else
       resp_hash = JSON.parse(result.body)
       lyrics = resp_hash["lyrics"]
       @song = Song.find_or_create_by(title: title, artist: artist, lyrics: lyrics)
+      flash[:notice] = "(>ﾟヮﾟ)> Song has been added! <(ﾟヮﾟ<)"
       redirect_to request.referrer
     end
+  end
+
+  def destroy
+    @song = Song.find(params[:id])
+    @song.destroy
+    redirect_to songs_path
   end
 
   private

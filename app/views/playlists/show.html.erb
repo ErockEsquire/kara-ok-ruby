@@ -6,7 +6,7 @@
   <label>Artist <%= text_field_tag :artist %>
   Title <%= text_field_tag :title %>
   <% hidden_field_tag :playlist_id, @playlist.id %>
-  <%= submit_tag "Add Song" %>
+  <%= submit_tag "Add Song", class: "button" %>
 <% end %>
 <br>
 <br>
@@ -23,7 +23,7 @@
 
 <% @playlist.songs.each do |song| %>
   <ul>
-    <li><%= link_to "#{song.artist} - #{song.title}", song_path(song) %></li>
+    <li><%= link_to "#{song.artist} - #{song.title}", "/songs/#{song.id}/#{@playlist.id}", method: "get" %></li>
     <%= button_to "Remove Song", "/playlist_songs/#{@playlist.id}/#{song.id}", method: :delete, data: {confirm: "Are you sure you want to remove?" }, class: "button" %>
   </ul>
 <% end %>

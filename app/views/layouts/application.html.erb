@@ -9,12 +9,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Mukta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
   </head>
 
   <body>
   <header>
-    <%= link_to 'Playlists', playlists_path %> | 
-    <%= link_to 'Songs', songs_path %>
+    <%= link_to 'Playlists', playlists_path, class: "header_playlist" %> <div class="pole">|</div> 
+    <%= link_to 'Song Vault', songs_path, class: "header_song" %>
   </header>
     <div class="body"><%= yield %></div>
   </body>

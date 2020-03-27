@@ -37,7 +37,7 @@ header{
 .kara{
   position: fixed;
   top: 36px;
-  left: 42.35%;
+  left: 37.6%;
   background-color: white;
   padding: 0 20px 0px 20px;
   margin: 0;
@@ -47,6 +47,11 @@ header{
 }
 h1.kara{
   font-size: 53px;
+  font-family: 'Montserrat Subrayada', sans-serif;
+}
+.pole{
+  text-align: center;
+  display: inline-block;
 }
 body{
   background-color: indianred;
@@ -92,18 +97,25 @@ a:visited {
 }
 a:hover {
   font-style: italic;
+  text-shadow: 1px 1px indianred;
+}
+a.header_playlist{
+ 
+}
+a.header_song{
+
 }
 .button{
-  background-color: blanchedalmond;
-  font-size: 15px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
+  font-size: 12px;
+  font-family: 'Sen', sans-serif;
   border-radius: 10px;
   box-shadow: 3px 3px;
 }
 .delete_button{
   background-color: blanchedalmond;
   font-size: 15px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Sen', sans-serif;
   border-radius: 10px;
   box-shadow: 3px 3px;
 }
@@ -122,11 +134,13 @@ a:hover {
 }
 .lyrics_show{
   text-shadow: 1px 1px blanchedalmond;
+  font-family: 'Sen', sans-serif;
+  font-size: 23px;
 }
 
 .edit_song{
   margin-left: 45px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Comfortaa', cursive;
 }
 .alert {
   padding: 20px;
@@ -135,6 +149,7 @@ a:hover {
   width: 100%;
   animation-duration: 3s;
   animation-name: slidein;
+  text-align: center;
 }
 .notice{
   padding: 20px;
@@ -144,6 +159,7 @@ a:hover {
   width: 100%;
   animation-duration: 3s;
   animation-name: slidein;
+  text-align: center;
 }
 
 @keyframes slidein {
@@ -197,6 +213,19 @@ a:hover {
   height: 100%;
   overflow: hidden;
 }
+select#playlist_user_id{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 3px;
+  border: none;
+  background: #d4b8b8;
+  padding: 5px;
+  font-size: 15px;
+}
 
 input#song_artist{
   font-size: 15px;
@@ -215,10 +244,21 @@ input#song_video_url{
   width: 30%;
   margin-top: 5px;
 }
-.container{
+input#playlist_name{
+  font-size: 15px;
+}
+input#artist{
+  font-size: 15px;
+}
+input#title{
+  font-size: 15px;
+}
+input.button{
+  position: relative;
+  bottom: 4px;
+}
+.lyrics_container{
   display: flex;
-  /* flex-direction: row;
-  justify-content: flex-end; */
   margin-left: 50px;
   width: 50%;
 }

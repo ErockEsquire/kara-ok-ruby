@@ -7,8 +7,8 @@
   <%= f.label "Playlist Name" %>
   <%= f.text_field :name %>
 
-  <%= f.collection_select :user_id, User.all, :id, :username %>
-  <%= f.submit 'Create Playlist' %>
+  <%= f.collection_select :user_id, User.all, :id, :username, class: "profile_select" %>
+  <%= f.submit 'Create Playlist', class: "button" %>
 <% end %>
 
 <br>
@@ -16,7 +16,7 @@
     <h4><%= link_to "#{playlist.name}", playlist_path(playlist) %></h4>
       <% playlist.songs[0..2].each do |song| %>
       <ul>
-        <li><%= link_to "#{song.artist} - #{song.title}", song_path(song) %></li>
+        <li><%= link_to "#{song.artist} - #{song.title}", "/songs/#{song.id}/#{playlist.id}", method: "get" %></li>
       </ul>
       <% end %>
       <br>
