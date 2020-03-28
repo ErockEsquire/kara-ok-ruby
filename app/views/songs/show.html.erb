@@ -7,9 +7,9 @@
   <% end %>
   <br>
   <div class="lyrics_container">
-    <div class="lyrics_show"><%= @song.lyrics.gsub(/\r\n/, '<br>').html_safe %></div>
+    <div class="lyrics_show"><%= @song.lyrics.gsub(/[\r\n]+/, '<br><br>').html_safe %></div>
     <div id="video">
-      <% if @song.video_url.blank? == false %>
+      <% if !@song.video_url.blank? %>
         <iframe id="iframe_main" width="560" height="315" src="https://www.youtube.com/embed/<%= @song.video_url.match(/\w+$/).to_s %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <% end %>
     </div>

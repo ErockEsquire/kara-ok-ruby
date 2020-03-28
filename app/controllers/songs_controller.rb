@@ -36,14 +36,21 @@ class SongsController < ApplicationController
     else
       resp_hash = JSON.parse(result.body)
       lyrics = resp_hash["lyrics"]
-      @song = Song.find_or_create_by(title: title, artist: artist)
-      if !PlaylistSong.find_by(playlist_id: params[:playlist_id], song_id: @song.id)
+      if !Song.find_by(title: title, artist: artist)
+        @song = Song.create(title: title, artist: artist, lyrics: lyrics)
         @playlist_song = PlaylistSong.create(playlist_id: params[:playlist_id], song_id: @song.id)
         flash[:notice] = "(>ﾟヮﾟ)> Song has been added! <(ﾟヮﾟ<)"
         redirect_to request.referrer
       else
-        flash[:alert] = "(；￣ .￣）...this song is already in playlist!"
-        redirect_to request.referrer
+        @song = Song.find_by(title: title, artist: artist)
+        if !PlaylistSong.find_by(playlist_id: params[:playlist_id], song_id: @song.id)
+          @playlist_song = PlaylistSong.create(playlist_id: params[:playlist_id], song_id: @song.id)
+          flash[:notice] = "(>ﾟヮﾟ)> Song has been added! <(ﾟヮﾟ<)"
+          redirect_to request.referrer
+        else
+          flash[:alert] = "(；￣ .￣）...this song is already in playlist!"
+          redirect_to request.referrer
+        end
       end
     end
   end

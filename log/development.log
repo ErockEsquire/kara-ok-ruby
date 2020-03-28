@@ -42254,3 +42254,1466 @@ Processing by PlaylistsController#create as HTML
 Completed 200 OK in 135ms (Views: 78.9ms | ActiveRecord: 10.9ms | Allocations: 30158)
 
 
+Started GET "/" for 127.0.0.1 at 2020-03-27 13:39:34 -0400
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/raquelrandall/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/raquelrandall/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 47.8ms | Allocations: 480)
+Completed 200 OK in 157ms (Views: 79.6ms | ActiveRecord: 0.0ms | Allocations: 2845)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:39:41 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (1.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 252.3ms | Allocations: 28624)
+[Webpacker] Compiling...
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:39:46 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 27.2ms | Allocations: 3825)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/raquelrandall/erocknine/Projects/flatiron_mod_two_project_rails/public/packs
+[Webpacker] Hash: 32e57f147dbdcbbf0c82
+Version: webpack 4.42.0
+Time: 4881ms
+Built at: 03/27/2020 1:39:52 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bbe9c4a129ab949e0636.js    124 KiB  application  [emitted] [immutable]  application
+js/application-bbe9c4a129ab949e0636.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bbe9c4a129ab949e0636.js js/application-bbe9c4a129ab949e0636.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 11318ms (Views: 11193.1ms | ActiveRecord: 35.3ms | Allocations: 79331)
+
+
+[Webpacker] Compiled all packs in /Users/raquelrandall/erocknine/Projects/flatiron_mod_two_project_rails/public/packs
+[Webpacker] Hash: 32e57f147dbdcbbf0c82
+Version: webpack 4.42.0
+Time: 3324ms
+Built at: 03/27/2020 1:39:53 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bbe9c4a129ab949e0636.js    124 KiB  application  [emitted] [immutable]  application
+js/application-bbe9c4a129ab949e0636.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bbe9c4a129ab949e0636.js js/application-bbe9c4a129ab949e0636.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 7161ms (Views: 7154.5ms | ActiveRecord: 1.9ms | Allocations: 10798)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:39:57 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (1.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 31.8ms | Allocations: 3773)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 51.5ms | ActiveRecord: 4.5ms | Allocations: 7911)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 13:40:00 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (3.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 1992)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 37.9ms | ActiveRecord: 3.2ms | Allocations: 6687)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:40:01 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 28.9ms | Allocations: 3772)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.9ms | Allocations: 7902)
+
+
+Started GET "/songs/1/1" for 127.0.0.1 at 2020-03-27 13:40:17 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"VbCUAlNrFoM8KsMsqiyuyigbjwrsRjQSrdLrP0sXfPzupyoTRKw2Mtnnam/jQOaJ1EjnfbwLUW+35hmgu8Fbgw==", "id"=>"1", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 574)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.5ms | Allocations: 6067)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2020-03-27 13:40:19 -0400
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:19:in `edit'
+  Rendering songs/edit.html.erb within layouts/application
+  Rendered songs/edit.html.erb within layouts/application (Duration: 14.7ms | Allocations: 1018)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 37.8ms | ActiveRecord: 0.4ms | Allocations: 5772)
+
+
+Started PATCH "/songs/1" for 127.0.0.1 at 2020-03-27 13:40:24 -0400
+Processing by SongsController#update as HTML
+  Parameters: {"authenticity_token"=>"NxsU0Gwbq317IuulqGMzHu+8bLofhyY71UhY7pRKMH3ddeyzs2enuGwZueiQYMh7HYjhgbxcA1//w2wum+kaJg==", "song"=>{"video_url"=>"https://www.youtube.com/watch?v=Bimd2nZirT4", "lyrics"=>"So I heard you found somebody else\r\n\r\nAnd at first, I thought it was a lie\r\n\r\nI took all my things that make sounds\r\n\r\nThe rest I can do without\r\n\r\n\r\nI don't want your body\r\n\r\nBut I hate to think about you with somebody else\r\n\r\nOur love has gone cold\r\n\r\nYou're intertwining your soul with somebody else\r\n\r\n\r\n\r\nI'm looking through you\r\n\r\nWhile you're looking through your phone\r\n\r\nAnd then leaving with somebody else\r\n\r\nNo, I don't want your body\r\n\r\nBut I'm picturing your body with somebody else\r\n\r\n\r\n\r\nI don't want your body, I don't want your body\r\n\r\nI don't want your body, I don't want your body\r\n\r\nI don't want your body, I don't want your body\r\n\r\nI don't want your body, I don't want your body\r\n\r\n\r\n\r\nC'mon baby (I know)\r\n\r\nThis ain't the last time that I'll see your face\r\n\r\nC'mon baby (I know)\r\n\r\nYou said you'd find someone to take my place\r\n\r\n\r\n\r\nOh, I just don't believe that you have got it in you\r\n\r\n'Cause we are just gonna keep \"doin' it\" and every time\r\n\r\nI start to believe in anything you're saying\r\n\r\nI'm reminded that I should be gettin' over it\r\n\r\n\r\n\r\nI don't want your body\r\n\r\nBut I hate to think about you with somebody else\r\n\r\nOur love has gone cold\r\n\r\nYou're intertwining your soul with somebody else\r\n\r\n\r\n\r\nI'm looking through you\r\n\r\nWhile you're looking through your phone\r\n\r\nAnd then leaving with somebody else\r\n\r\nNo, I don't want your body\r\n\r\nBut I'm picturing your body with somebody else\r\n\r\n\r\n\r\nI don't want your body, I don't want your body\r\n\r\nI don't want your body, I don't want your body\r\n\r\nI don't want your body, I don't want your body\r\n\r\nI don't want your body, I don't want your body\r\n\r\n\r\n\r\nGet someone you love?\r\n\r\nGet someone you need?\r\n\r\nFuck that, get money\r\n\r\nI can't give you my soul, 'cause we're never alone\r\n\r\nGet someone you love?\r\n\r\nGet someone you need?\r\n\r\nFuck that, get money\r\n\r\nI can't give you my soul, 'cause we're never alone\r\n\r\nGet someone you love?\r\n\r\nGet someone you need?\r\n\r\nFuck that, get money\r\n\r\nI can't give you my soul, 'cause we're never alone\r\n\r\nGet someone you love?\r\n\r\nGet someone you need?\r\n\r\nFuck that, get money\r\n\r\nI can't give you my soul, 'cause we're never alone\r\n\r\n\r\n\r\nI don't want your body\r\n\r\nBut I hate to think about you with somebody else\r\n\r\nOur love has gone cold\r\n\r\nYou're intertwining your soul with somebody else\r\n\r\n\r\n\r\nI'm looking through you\r\n\r\nWhile you're looking through your phone\r\n\r\nAnd then leaving with somebody else\r\n\r\nNo, I don't want your body\r\n\r\nBut I'm picturing your body with somebody else"}, "commit"=>"Update Song", "id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:23:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/songs_controller.rb:24:in `update'
+  [1m[36mSong Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "songs" WHERE "songs"."title" = ? AND "songs"."id" != ? LIMIT ?[0m  [["title", "Somebody Else"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/songs_controller.rb:24:in `update'
+Redirected to http://127.0.0.1:3000/songs/1
+Completed 302 Found in 23ms (ActiveRecord: 0.9ms | Allocations: 3814)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2020-03-27 13:40:24 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 214)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 4826)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 13:40:26 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 1570)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.3ms | Allocations: 5679)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:40:26 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (1.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (1.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 3775)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 51.1ms | ActiveRecord: 3.0ms | Allocations: 7900)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 13:41:19 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1567)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 142ms (Views: 139.5ms | ActiveRecord: 0.4ms | Allocations: 5677)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2020-03-27 13:41:21 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 213)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.3ms | Allocations: 4828)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 13:41:23 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1567)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.2ms | Allocations: 5680)
+
+
+Started POST "/songs/sort_artist" for 127.0.0.1 at 2020-03-27 13:41:23 -0400
+Processing by SongsController#sort_artist as HTML
+  Parameters: {"authenticity_token"=>"2MPUX381WBl8DN+xzOTxvY1Ftq4oyejttRQznxb41udLiTBwzeHOekI9lg8zrAX2otXtP2aSBQ9XXUPGIGWu/Q=="}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:74:in `sort_by'
+  Rendering songs/index.html.erb within layouts/application
+  Rendered songs/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 821)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.3ms | Allocations: 5658)
+
+
+Started POST "/songs/sort_title" for 127.0.0.1 at 2020-03-27 13:41:25 -0400
+Processing by SongsController#sort_title as HTML
+  Parameters: {"authenticity_token"=>"CRoPP6FJVxRbkZDkvzDTdAaYI8Kx8CmR/+oLCnUHhN+yDbEuto53pb5cOaf2XJs3+stLteG9TOzl3vmVhdGjoA=="}
+  [1m[36mSong Load (3.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:79:in `sort_by'
+  Rendering songs/index.html.erb within layouts/application
+  Rendered songs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 820)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 3.0ms | Allocations: 5640)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:41:26 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (1.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 25.1ms | Allocations: 3761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 49.9ms | ActiveRecord: 2.2ms | Allocations: 7884)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 13:41:27 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1567)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.3ms | Allocations: 5675)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:41:27 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 19.6ms | Allocations: 3761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.9ms | Allocations: 7889)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2020-03-27 13:41:29 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 13.2ms | Allocations: 2683)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 0.5ms | Allocations: 7429)
+
+
+Started GET "/songs/10/1" for 127.0.0.1 at 2020-03-27 13:41:34 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"ZhMv5NYEBL1FHmlQVqDdaBQiUDex7xBddEo4lJNEGxbdBJH1wcMkDKDTwBMfzJUr6HE4QOGidSBufsoLY5I8aQ==", "id"=>"10", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 30.4ms | ActiveRecord: 0.7ms | Allocations: 5353)
+
+
+Started POST "/songs/1/add_to_playlist" for 127.0.0.1 at 2020-03-27 13:41:46 -0400
+Processing by SongsController#add_to_playlist as HTML
+  Parameters: {"authenticity_token"=>"ZhMv5NYEBL1FHmlQVqDdaBQiUDex7xBddEo4lJNEGxbdBJH1wcMkDKDTwBMfzJUr6HE4QOGidSBufsoLY5I8aQ==", "artist"=>"queen", "title"=>"somebody to love", "commit"=>"Add Song", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+  [1m[36mSong Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "songs" WHERE "songs"."title" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+  [1m[36mSong Create (12.2ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["created_at", "2020-03-27 17:41:47.244087"], ["updated_at", "2020-03-27 17:41:47.244087"]]
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+  [1m[36mPlaylistSong Load (0.8ms)[0m  [1m[34mSELECT "playlist_songs".* FROM "playlist_songs" WHERE "playlist_songs"."playlist_id" = ? AND "playlist_songs"."song_id" = ? LIMIT ?[0m  [["playlist_id", 1], ["song_id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:40:in `add_to_playlist'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/songs_controller.rb:41:in `add_to_playlist'
+  [1m[36mPlaylistSong Create (1.1ms)[0m  [1m[32mINSERT INTO "playlist_songs" ("playlist_id", "song_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["playlist_id", 1], ["song_id", 15], ["created_at", "2020-03-27 17:41:47.303899"], ["updated_at", "2020-03-27 17:41:47.303899"]]
+  ↳ app/controllers/songs_controller.rb:41:in `add_to_playlist'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/songs_controller.rb:41:in `add_to_playlist'
+Redirected to http://127.0.0.1:3000/playlists/1
+Completed 302 Found in 838ms (ActiveRecord: 23.5ms | Allocations: 15861)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2020-03-27 13:41:47 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2369)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 44.4ms | ActiveRecord: 0.6ms | Allocations: 6991)
+
+
+Started GET "/songs/15/1" for 127.0.0.1 at 2020-03-27 13:41:51 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"KQ1WjtsMzuDLu8jX5jgM7899YIeBogBbukHQWBESAOiSGuifzMvuUS52YZSvVESsMy4I8NHvZSagdSLH4cQnlw==", "id"=>"15", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 23.1ms | Allocations: 2085)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.5ms | Allocations: 3502)
+
+
+  
+ActionView::Template::Error (undefined method `gsub' for nil:NilClass):
+     7:   <% end %>
+     8:   <br>
+     9:   <div class="lyrics_container">
+    10:     <div class="lyrics_show"><%= @song.lyrics.gsub(/\r\n/, '<br>').html_safe %></div>
+    11:     <div id="video">
+    12:       <% if @song.video_url.blank? == false %>
+    13:         <iframe id="iframe_main" width="560" height="315" src="https://www.youtube.com/embed/<%= @song.video_url.match(/\w+$/).to_s %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+app/views/songs/show.html.erb:10
+Started GET "/songs/15/1" for 127.0.0.1 at 2020-03-27 13:43:34 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"KQ1WjtsMzuDLu8jX5jgM7899YIeBogBbukHQWBESAOiSGuifzMvuUS52YZSvVESsMy4I8NHvZSagdSLH4cQnlw==", "id"=>"15", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1291)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 9.4ms | Allocations: 16569)
+
+
+  
+ActionView::Template::Error (undefined method `gsub' for nil:NilClass):
+     7:   <% end %>
+     8:   <br>
+     9:   <div class="lyrics_container">
+    10:     <div class="lyrics_show"><%= @song.lyrics.gsub(/\r\n/, '<br>').html_safe %></div>
+    11:     <div id="video">
+    12:       <% if @song.video_url.blank? == false %>
+    13:         <iframe id="iframe_main" width="560" height="315" src="https://www.youtube.com/embed/<%= @song.video_url.match(/\w+$/).to_s %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+app/views/songs/show.html.erb:10
+Started PUT "/__web_console/repl_sessions/65cee529b89ae0fdad9997c5285c2152" for 127.0.0.1 at 2020-03-27 13:43:42 -0400
+Started PUT "/__web_console/repl_sessions/65cee529b89ae0fdad9997c5285c2152" for 127.0.0.1 at 2020-03-27 13:43:43 -0400
+Started PUT "/__web_console/repl_sessions/65cee529b89ae0fdad9997c5285c2152" for 127.0.0.1 at 2020-03-27 13:43:52 -0400
+Started PUT "/__web_console/repl_sessions/65cee529b89ae0fdad9997c5285c2152" for 127.0.0.1 at 2020-03-27 13:43:52 -0400
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" ORDER BY "songs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/songs/show.html.erb:10
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" ORDER BY "songs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" ORDER BY "songs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlaylistSong Load (0.2ms)[0m  [1m[34mSELECT "playlist_songs".* FROM "playlist_songs" WHERE "playlist_songs"."song_id" = ?[0m  [["song_id", 15]]
+  [1m[36mPlaylistSong Destroy (0.5ms)[0m  [1m[31mDELETE FROM "playlist_songs" WHERE "playlist_songs"."id" = ?[0m  [["id", 17]]
+  [1m[36mSong Destroy (0.2ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/playlists/1" for 127.0.0.1 at 2020-03-27 13:45:27 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (1.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 67.5ms | Allocations: 10942)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 141ms (Views: 100.5ms | ActiveRecord: 5.6ms | Allocations: 20626)
+
+
+Started POST "/songs/1/add_to_playlist" for 127.0.0.1 at 2020-03-27 13:45:32 -0400
+Processing by SongsController#add_to_playlist as HTML
+  Parameters: {"authenticity_token"=>"8+gRurejI0EYTAjR1uXxgw2Biv2y83gEcnLJq+9ofJ5I/6+roGQD8P2BoZKfibnA8dLiiuK+HXloRjs0H75b4Q==", "artist"=>"queen", "title"=>"somebody to love", "commit"=>"Add Song", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+Completed 500 Internal Server Error in 540ms (ActiveRecord: 0.4ms | Allocations: 4566)
+
+
+  
+NoMethodError (undefined method `join' for {:title=>"Somebody To Love", :artist=>"Queen"}:Hash):
+  
+app/controllers/songs_controller.rb:39:in `add_to_playlist'
+Started GET "/playlists/1" for 127.0.0.1 at 2020-03-27 13:45:54 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 86.3ms | Allocations: 10977)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 187ms (Views: 124.4ms | ActiveRecord: 6.4ms | Allocations: 20634)
+
+
+Started POST "/songs/1/add_to_playlist" for 127.0.0.1 at 2020-03-27 13:46:02 -0400
+Processing by SongsController#add_to_playlist as HTML
+  Parameters: {"authenticity_token"=>"bnUTuLyPc9rFhGtn5vpCrxRjbskSmAW+B+Lcdzd5X8LVYq2pq0hTayBJwiSvlgrs6DAGvkLVYMMd1i7ox694vQ==", "artist"=>"queen", "title"=>"somebody to love", "commit"=>"Add Song", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/songs_controller.rb:40:in `add_to_playlist'
+  [1m[36mSong Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "songs" WHERE "songs"."title" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:40:in `add_to_playlist'
+  [1m[36mSong Create (1.0ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "lyrics", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["lyrics", "Can anybody find me somebody to love?\r\nEach morning I get up I die a little\r\n\nCan barely stand on my feet\r\n(Take a look at yourself) Take a look in the mirror \r\nAnd cry (and cry) Lord what you're doing to me? \nI have spent all my years in believing you\nBut I just can't get no relief, Lord!\n\nSomebody (somebody) ooh somebody (somebody)\nCan anybody find me somebody to love?\nYeah\n\nI work hard (he works hard) every day of my life\nI work till I ache in my bones\nAt the end (at the end of the day)\nI take home my hard earned pay all on my own\nI get down (down) on my knees (knees)\nAnd I start to pray (praise the Lord)\nTill the tears run down from my eyes\nLord somebody (somebody), ooh somebody\n(Please) Can anybody find me somebody to love?\n\n(He works hard)\nEveryday (everyday) - I try and I try and I try\nBut everybody wants to put me down\nThey say I'm going crazy\nThey say I got a lot of water in my brain\nAh, got no common sense\n(He's got) Got nobody left to believe\n\nOoh somebody\nOoh (somebody)\nAnybody find me somebody to love!\n(Anybody find me someone to love!)\n\nGot no feel, I got no rhythm\nI just keep losing my beat (just keep losing and losing)\nI'm okay, I'm alright (he's alright, he's alright)\nI ain't gonna face no defeat (yeah, yeah)\nI just gotta get out of this prison cell\nOne day I'm gonna be free, Lord\n\nFind me somebody to love \nFind me somebody to love \nFind me somebody to love \nFind me somebody to love \nFind me somebody to love \nFind me somebody to love \nFind me somebody to love \nFind me somebody to love \n\nFind me somebody to love \nFind me somebody to love \nSomebody (somebody)\nSomebody (somebody)\nSomebody (find me)\n(Somebody find me somebody to love)\nCan (anybody find me) \nSomebody to love?\n\n(Find me somebody to love) \n(Find me somebody to love) \n(Find me somebody to love) \n(Find me somebody to love)\n(Find me somebody to love) \n(Find me somebody to love) \n(Find me somebody to love)\nFind me, find me, find me..."], ["created_at", "2020-03-27 17:46:02.964229"], ["updated_at", "2020-03-27 17:46:02.964229"]]
+  ↳ app/controllers/songs_controller.rb:40:in `add_to_playlist'
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/songs_controller.rb:40:in `add_to_playlist'
+  [1m[36mPlaylistSong Load (0.3ms)[0m  [1m[34mSELECT "playlist_songs".* FROM "playlist_songs" WHERE "playlist_songs"."playlist_id" = ? AND "playlist_songs"."song_id" = ? LIMIT ?[0m  [["playlist_id", 1], ["song_id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:41:in `add_to_playlist'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/songs_controller.rb:42:in `add_to_playlist'
+  [1m[36mPlaylistSong Create (1.0ms)[0m  [1m[32mINSERT INTO "playlist_songs" ("playlist_id", "song_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["playlist_id", 1], ["song_id", 16], ["created_at", "2020-03-27 17:46:02.993776"], ["updated_at", "2020-03-27 17:46:02.993776"]]
+  ↳ app/controllers/songs_controller.rb:42:in `add_to_playlist'
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/songs_controller.rb:42:in `add_to_playlist'
+Redirected to http://127.0.0.1:3000/playlists/1
+Completed 302 Found in 596ms (ActiveRecord: 17.7ms | Allocations: 11310)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2020-03-27 13:46:03 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (1.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 13.6ms | Allocations: 2370)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 74.7ms | ActiveRecord: 1.7ms | Allocations: 10008)
+
+
+Started GET "/songs/16/1" for 127.0.0.1 at 2020-03-27 13:46:07 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"y9cUcaRGqyoYa6NmPbpSghDbCvJa5X0kRg2rU1Glq/5wwKpgs4GLm/2mCiV01hrB7IhihQqoGFlcOVnMoXOMgQ==", "id"=>"16", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 33.2ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 66.9ms | ActiveRecord: 0.5ms | Allocations: 5624)
+
+
+Started GET "/songs/16/1" for 127.0.0.1 at 2020-03-27 13:46:32 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"16", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 551)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 79.1ms | ActiveRecord: 0.7ms | Allocations: 6636)
+
+
+Started GET "/songs/16/1" for 127.0.0.1 at 2020-03-27 13:46:50 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"16", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (1.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 545)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 35.8ms | ActiveRecord: 1.6ms | Allocations: 6631)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2020-03-27 13:46:55 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 23.2ms | Allocations: 2841)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 45.9ms | ActiveRecord: 0.7ms | Allocations: 8020)
+
+
+Started GET "/songs/10/1" for 127.0.0.1 at 2020-03-27 13:46:57 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"unfRhlrUeGUnccdT86hMCXmRTgqHX+lbsqFVB/j8XPsBYG+XTRNY1MK8bhC6xARKhcImfdcSjCaolaeYCCp7hA==", "id"=>"10", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (1.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 42.5ms | ActiveRecord: 1.7ms | Allocations: 5355)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2020-03-27 13:46:58 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (2.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2366)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 38.0ms | ActiveRecord: 2.5ms | Allocations: 6967)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 13:47:00 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2017)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.4ms | Allocations: 6273)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:47:04 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (5.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 71.1ms | Allocations: 10231)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 86.4ms | ActiveRecord: 7.3ms | Allocations: 14392)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2020-03-27 13:47:06 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (2.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2367)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 43.7ms | ActiveRecord: 2.5ms | Allocations: 6977)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:47:47 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 27.8ms | Allocations: 4175)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 2.5ms | Allocations: 8300)
+
+
+Started POST "/playlists" for 127.0.0.1 at 2020-03-27 13:47:54 -0400
+Processing by PlaylistsController#create as HTML
+  Parameters: {"authenticity_token"=>"kBcWYVtZdI1B1LMwMNyvGjlSJbYn6VJb5xz294emOifP1QVxr4ho7nToSBc/wrAnLnXYIkTcOTx17NoJyIlM2A==", "playlist"=>{"name"=>"Queen", "user_id"=>"1"}, "commit"=>"Create Playlist"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/playlists_controller.rb:19:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:19:in `create'
+  [1m[36mPlaylist Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "playlists" WHERE "playlists"."name" = ? LIMIT ?[0m  [["name", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:19:in `create'
+  [1m[36mPlaylist Create (1.2ms)[0m  [1m[32mINSERT INTO "playlists" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Queen"], ["user_id", 1], ["created_at", "2020-03-27 17:47:54.150175"], ["updated_at", "2020-03-27 17:47:54.150175"]]
+  ↳ app/controllers/playlists_controller.rb:19:in `create'
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/playlists_controller.rb:19:in `create'
+Redirected to http://127.0.0.1:3000/playlists/5
+Completed 302 Found in 68ms (ActiveRecord: 10.0ms | Allocations: 7701)
+
+
+Started GET "/playlists/5" for 127.0.0.1 at 2020-03-27 13:47:54 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlaylist Load (1.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 5]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1259)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 37.5ms | ActiveRecord: 1.6ms | Allocations: 5856)
+
+
+Started POST "/songs/5/add_to_playlist" for 127.0.0.1 at 2020-03-27 13:48:01 -0400
+Processing by SongsController#add_to_playlist as HTML
+  Parameters: {"authenticity_token"=>"vg/AGLdP7+2gvFvJi5utZaYM7nHRtFgvBs6trqvRO+sFGH4JoIjPXEVx8orC9+UmWl+GBoH5PVIc+l8xWwcclA==", "artist"=>"queen", "title"=>"somebody to love", "commit"=>"Add Song", "playlist_id"=>"5"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+No template found for SongsController#add_to_playlist, rendering head :no_content
+Completed 204 No Content in 518ms (ActiveRecord: 0.4ms | Allocations: 3805)
+
+
+Started GET "/playlists/5" for 127.0.0.1 at 2020-03-27 13:49:49 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 5]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 40.4ms | Allocations: 6248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 161ms (Views: 86.3ms | ActiveRecord: 4.8ms | Allocations: 15868)
+
+
+Started POST "/songs/5/add_to_playlist" for 127.0.0.1 at 2020-03-27 13:49:54 -0400
+Processing by SongsController#add_to_playlist as HTML
+  Parameters: {"authenticity_token"=>"Fk34mGZMrx6QkMXvMvV6vVjrLZcXtYJjeZUnMc06/j6tWkaJcYuPr3VdbKx7mTL+pLhF4Ef45x5jodWuPezZQQ==", "artist"=>"queen", "title"=>"somebody to love", "commit"=>"Add Song", "playlist_id"=>"5"}
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+  [1m[36mCACHE Song Load (0.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:45:in `add_to_playlist'
+  [1m[36mPlaylistSong Load (0.4ms)[0m  [1m[34mSELECT "playlist_songs".* FROM "playlist_songs" WHERE "playlist_songs"."playlist_id" = ? AND "playlist_songs"."song_id" = ? LIMIT ?[0m  [["playlist_id", 5], ["song_id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:46:in `add_to_playlist'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/songs_controller.rb:47:in `add_to_playlist'
+  [1m[36mPlaylistSong Create (9.8ms)[0m  [1m[32mINSERT INTO "playlist_songs" ("playlist_id", "song_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["playlist_id", 5], ["song_id", 16], ["created_at", "2020-03-27 17:49:55.238455"], ["updated_at", "2020-03-27 17:49:55.238455"]]
+  ↳ app/controllers/songs_controller.rb:47:in `add_to_playlist'
+  [1m[35m (24.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/songs_controller.rb:47:in `add_to_playlist'
+Redirected to http://127.0.0.1:3000/playlists/5
+Completed 302 Found in 663ms (ActiveRecord: 35.7ms | Allocations: 15297)
+
+
+Started GET "/playlists/5" for 127.0.0.1 at 2020-03-27 13:49:55 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 5]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 0.8ms | Allocations: 9250)
+
+
+Started POST "/songs/5/add_to_playlist" for 127.0.0.1 at 2020-03-27 13:50:07 -0400
+Processing by SongsController#add_to_playlist as HTML
+  Parameters: {"authenticity_token"=>"vjxsxpfT96fwNpJq/72uAAx0R5wRhUg6BjlzLMyTlvEFK9LXgBTXFhX7Oym20eZD8Ccv60HILUccDYGzPEWxjg==", "artist"=>"queen", "title"=>"somebody to love", "commit"=>"Add Song", "playlist_id"=>"5"}
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+  [1m[36mCACHE Song Load (0.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:45:in `add_to_playlist'
+  [1m[36mPlaylistSong Load (0.2ms)[0m  [1m[34mSELECT "playlist_songs".* FROM "playlist_songs" WHERE "playlist_songs"."playlist_id" = ? AND "playlist_songs"."song_id" = ? LIMIT ?[0m  [["playlist_id", 5], ["song_id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:46:in `add_to_playlist'
+Redirected to http://127.0.0.1:3000/playlists/5
+Completed 302 Found in 538ms (ActiveRecord: 0.8ms | Allocations: 3434)
+
+
+Started GET "/playlists/5" for 127.0.0.1 at 2020-03-27 13:50:08 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 5]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1450)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 58.4ms | ActiveRecord: 0.7ms | Allocations: 6067)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:50:17 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (1.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (1.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 5]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 122.7ms | Allocations: 8463)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 150ms (Views: 141.5ms | ActiveRecord: 6.1ms | Allocations: 12597)
+
+
+Started GET "/playlists/5" for 127.0.0.1 at 2020-03-27 13:50:19 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 5]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 20.3ms | Allocations: 1445)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 43.7ms | ActiveRecord: 0.7ms | Allocations: 6045)
+
+
+Started DELETE "/playlists/5" for 127.0.0.1 at 2020-03-27 13:50:22 -0400
+Processing by PlaylistsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"P/qXgZMeIiglfMYNglb5F+D56hu2zMMU5YjDnB4abFXeLAXH42V8KzXrSQcRzbY9Yy3lo6K9YFxJtjS674n/Jg==", "id"=>"5"}
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:37:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/playlists_controller.rb:38:in `destroy'
+  [1m[36mPlaylistSong Load (0.4ms)[0m  [1m[34mSELECT "playlist_songs".* FROM "playlist_songs" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 5]]
+  ↳ app/controllers/playlists_controller.rb:38:in `destroy'
+  [1m[36mPlaylistSong Destroy (0.8ms)[0m  [1m[31mDELETE FROM "playlist_songs" WHERE "playlist_songs"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/playlists_controller.rb:38:in `destroy'
+  [1m[36mPlaylist Destroy (0.4ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/playlists_controller.rb:38:in `destroy'
+  [1m[35m (33.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/playlists_controller.rb:38:in `destroy'
+Redirected to http://127.0.0.1:3000/playlists
+Completed 302 Found in 69ms (ActiveRecord: 35.9ms | Allocations: 5130)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:50:22 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 46.0ms | Allocations: 6792)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 74.1ms | ActiveRecord: 2.2ms | Allocations: 10919)
+
+
+Started POST "/playlists" for 127.0.0.1 at 2020-03-27 13:51:37 -0400
+Processing by PlaylistsController#create as HTML
+  Parameters: {"authenticity_token"=>"sX7epLNGuLbiIavwhnXQTu/fi2bDECoiWN6RFtQzXxsKaWC1pIGYBwfsArPPGZgNE4zjEZNdT19C6mOJJOV4ZA==", "playlist"=>{"name"=>"Queen", "user_id"=>"1"}, "commit"=>"Create Playlist"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/playlists_controller.rb:19:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:19:in `create'
+  [1m[36mPlaylist Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "playlists" WHERE "playlists"."name" = ? LIMIT ?[0m  [["name", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:19:in `create'
+  [1m[36mPlaylist Create (0.9ms)[0m  [1m[32mINSERT INTO "playlists" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Queen"], ["user_id", 1], ["created_at", "2020-03-27 17:51:37.873436"], ["updated_at", "2020-03-27 17:51:37.873436"]]
+  ↳ app/controllers/playlists_controller.rb:19:in `create'
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/playlists_controller.rb:19:in `create'
+Redirected to http://127.0.0.1:3000/playlists/6
+Completed 302 Found in 71ms (ActiveRecord: 5.4ms | Allocations: 5292)
+
+
+Started GET "/playlists/6" for 127.0.0.1 at 2020-03-27 13:51:37 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 53.3ms | Allocations: 1259)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 97.3ms | ActiveRecord: 0.5ms | Allocations: 8885)
+
+
+Started POST "/songs/6/add_to_playlist" for 127.0.0.1 at 2020-03-27 13:51:50 -0400
+Processing by SongsController#add_to_playlist as HTML
+  Parameters: {"authenticity_token"=>"1/wbAumhMInW005R4+4LruVT03CcnKnx3powluxgSJ9s66UT/mYQODMe5xKqgkPtGQC7B8zRzIzErsIJHLZv4A==", "artist"=>"queen", "title"=>"somebody to love", "commit"=>"Add Song", "playlist_id"=>"6"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+  [1m[36mCACHE Song Load (0.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:45:in `add_to_playlist'
+  [1m[36mPlaylistSong Load (1.2ms)[0m  [1m[34mSELECT "playlist_songs".* FROM "playlist_songs" WHERE "playlist_songs"."playlist_id" = ? AND "playlist_songs"."song_id" = ? LIMIT ?[0m  [["playlist_id", 6], ["song_id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:46:in `add_to_playlist'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/songs_controller.rb:47:in `add_to_playlist'
+  [1m[36mPlaylistSong Create (0.7ms)[0m  [1m[32mINSERT INTO "playlist_songs" ("playlist_id", "song_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["playlist_id", 6], ["song_id", 16], ["created_at", "2020-03-27 17:51:51.091489"], ["updated_at", "2020-03-27 17:51:51.091489"]]
+  ↳ app/controllers/songs_controller.rb:47:in `add_to_playlist'
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/songs_controller.rb:47:in `add_to_playlist'
+Redirected to http://127.0.0.1:3000/playlists/6
+Completed 302 Found in 552ms (ActiveRecord: 16.6ms | Allocations: 5449)
+
+
+Started GET "/playlists/6" for 127.0.0.1 at 2020-03-27 13:51:51 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1449)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 46.5ms | ActiveRecord: 0.5ms | Allocations: 6072)
+
+
+Started POST "/songs/6/add_to_playlist" for 127.0.0.1 at 2020-03-27 13:52:00 -0400
+Processing by SongsController#add_to_playlist as HTML
+  Parameters: {"authenticity_token"=>"IEuxq0wVifPgG1YKjF0z3a4Zmk6KAM4+mshjFwUJESmbXA+6W9KpQgXW/0nFMXueUkryOdpNq0OA/JGI9d82Vg==", "artist"=>"queen", "title"=>"somebody to love", "commit"=>"Add Song", "playlist_id"=>"6"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+  [1m[36mCACHE Song Load (0.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:45:in `add_to_playlist'
+  [1m[36mPlaylistSong Load (0.2ms)[0m  [1m[34mSELECT "playlist_songs".* FROM "playlist_songs" WHERE "playlist_songs"."playlist_id" = ? AND "playlist_songs"."song_id" = ? LIMIT ?[0m  [["playlist_id", 6], ["song_id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:46:in `add_to_playlist'
+Redirected to http://127.0.0.1:3000/playlists/6
+Completed 302 Found in 592ms (ActiveRecord: 0.7ms | Allocations: 3419)
+
+
+Started GET "/playlists/6" for 127.0.0.1 at 2020-03-27 13:52:01 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1450)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 37.4ms | ActiveRecord: 0.6ms | Allocations: 6071)
+
+
+Started GET "/songs/16/6" for 127.0.0.1 at 2020-03-27 13:52:12 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"/S5KNABSANa0q848IBU91l3EMvQOXb6M6nVmOl6kuAtGOfQlF5UgZ1FmZ39peXWVoZdag14Q2/HwQZSlrnKfdA==", "id"=>"16", "playlist_id"=>"6"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 27.3ms | ActiveRecord: 0.5ms | Allocations: 5630)
+
+
+Started GET "/songs/16/edit" for 127.0.0.1 at 2020-03-27 13:52:21 -0400
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:19:in `edit'
+  Rendering songs/edit.html.erb within layouts/application
+  Rendered songs/edit.html.erb within layouts/application (Duration: 9.5ms | Allocations: 773)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 48.0ms | ActiveRecord: 0.3ms | Allocations: 5526)
+
+
+Started PATCH "/songs/16" for 127.0.0.1 at 2020-03-27 13:52:50 -0400
+Processing by SongsController#update as HTML
+  Parameters: {"authenticity_token"=>"YpMIlrPM86KuTaFE1GqtZcKAikYgK5ltRLEw3kNrMg/7wLhztiqNkiRxaM0BD40Bu0S9vT+ovEpaSafJbpcD4Q==", "song"=>{"video_url"=>"https://www.youtube.com/watch?v=kijpcUv-b8M", "lyrics"=>"Can anybody find me somebody to love?\r\nEach morning I get up I die a little\r\n\r\nCan barely stand on my feet\r\n(Take a look at yourself) Take a look in the mirror \r\nAnd cry (and cry) Lord what you're doing to me? \r\nI have spent all my years in believing you\r\nBut I just can't get no relief, Lord!\r\n\r\nSomebody (somebody) ooh somebody (somebody)\r\nCan anybody find me somebody to love?\r\nYeah\r\n\r\nI work hard (he works hard) every day of my life\r\nI work till I ache in my bones\r\nAt the end (at the end of the day)\r\nI take home my hard earned pay all on my own\r\nI get down (down) on my knees (knees)\r\nAnd I start to pray (praise the Lord)\r\nTill the tears run down from my eyes\r\nLord somebody (somebody), ooh somebody\r\n(Please) Can anybody find me somebody to love?\r\n\r\n(He works hard)\r\nEveryday (everyday) - I try and I try and I try\r\nBut everybody wants to put me down\r\nThey say I'm going crazy\r\nThey say I got a lot of water in my brain\r\nAh, got no common sense\r\n(He's got) Got nobody left to believe\r\n\r\nOoh somebody\r\nOoh (somebody)\r\nAnybody find me somebody to love!\r\n(Anybody find me someone to love!)\r\n\r\nGot no feel, I got no rhythm\r\nI just keep losing my beat (just keep losing and losing)\r\nI'm okay, I'm alright (he's alright, he's alright)\r\nI ain't gonna face no defeat (yeah, yeah)\r\nI just gotta get out of this prison cell\r\nOne day I'm gonna be free, Lord\r\n\r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\n\r\nFind me somebody to love \r\nFind me somebody to love \r\nSomebody (somebody)\r\nSomebody (somebody)\r\nSomebody (find me)\r\n(Somebody find me somebody to love)\r\nCan (anybody find me) \r\nSomebody to love?\r\n\r\n(Find me somebody to love) \r\n(Find me somebody to love) \r\n(Find me somebody to love) \r\n(Find me somebody to love)\r\n(Find me somebody to love) \r\n(Find me somebody to love) \r\n(Find me somebody to love)\r\nFind me, find me, find me..."}, "commit"=>"Update Song", "id"=>"16"}
+  [1m[36mSong Load (1.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:23:in `update'
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/songs_controller.rb:24:in `update'
+  [1m[36mSong Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "songs" WHERE "songs"."title" = ? AND "songs"."id" != ? LIMIT ?[0m  [["title", "Somebody To Love"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:24:in `update'
+  [1m[36mSong Update (0.9ms)[0m  [1m[33mUPDATE "songs" SET "lyrics" = ?, "video_url" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["lyrics", "Can anybody find me somebody to love?\r\nEach morning I get up I die a little\r\n\r\nCan barely stand on my feet\r\n(Take a look at yourself) Take a look in the mirror \r\nAnd cry (and cry) Lord what you're doing to me? \r\nI have spent all my years in believing you\r\nBut I just can't get no relief, Lord!\r\n\r\nSomebody (somebody) ooh somebody (somebody)\r\nCan anybody find me somebody to love?\r\nYeah\r\n\r\nI work hard (he works hard) every day of my life\r\nI work till I ache in my bones\r\nAt the end (at the end of the day)\r\nI take home my hard earned pay all on my own\r\nI get down (down) on my knees (knees)\r\nAnd I start to pray (praise the Lord)\r\nTill the tears run down from my eyes\r\nLord somebody (somebody), ooh somebody\r\n(Please) Can anybody find me somebody to love?\r\n\r\n(He works hard)\r\nEveryday (everyday) - I try and I try and I try\r\nBut everybody wants to put me down\r\nThey say I'm going crazy\r\nThey say I got a lot of water in my brain\r\nAh, got no common sense\r\n(He's got) Got nobody left to believe\r\n\r\nOoh somebody\r\nOoh (somebody)\r\nAnybody find me somebody to love!\r\n(Anybody find me someone to love!)\r\n\r\nGot no feel, I got no rhythm\r\nI just keep losing my beat (just keep losing and losing)\r\nI'm okay, I'm alright (he's alright, he's alright)\r\nI ain't gonna face no defeat (yeah, yeah)\r\nI just gotta get out of this prison cell\r\nOne day I'm gonna be free, Lord\r\n\r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\nFind me somebody to love \r\n\r\nFind me somebody to love \r\nFind me somebody to love \r\nSomebody (somebody)\r\nSomebody (somebody)\r\nSomebody (find me)\r\n(Somebody find me somebody to love)\r\nCan (anybody find me) \r\nSomebody to love?\r\n\r\n(Find me somebody to love) \r\n(Find me somebody to love) \r\n(Find me somebody to love) \r\n(Find me somebody to love)\r\n(Find me somebody to love) \r\n(Find me somebody to love) \r\n(Find me somebody to love)\r\nFind me, find me, find me..."], ["video_url", "https://www.youtube.com/watch?v=kijpcUv-b8M"], ["updated_at", "2020-03-27 17:52:50.808372"], ["id", 16]]
+  ↳ app/controllers/songs_controller.rb:24:in `update'
+  [1m[35m (45.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/songs_controller.rb:24:in `update'
+Redirected to http://127.0.0.1:3000/songs/16
+Completed 302 Found in 181ms (ActiveRecord: 50.3ms | Allocations: 4418)
+
+
+Started GET "/songs/16" for 127.0.0.1 at 2020-03-27 13:52:50 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mSong Load (3.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 214)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 65.9ms | ActiveRecord: 3.7ms | Allocations: 5061)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:53:00 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (3.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 62.5ms | Allocations: 4771)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 90.0ms | ActiveRecord: 6.0ms | Allocations: 8893)
+
+
+Started GET "/songs/1/1" for 127.0.0.1 at 2020-03-27 13:53:01 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"/4A6GkezfS9CyW2LjivvL1aOEeumA1PXpavk2BX6p/hEl4QLUHRdnqcExMjHR6dsqt15nPZONqq/nxZH5SyAhw==", "id"=>"1", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 240)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 28.6ms | ActiveRecord: 1.3ms | Allocations: 5355)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 13:53:20 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 15.3ms | Allocations: 2019)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 59.8ms | ActiveRecord: 0.7ms | Allocations: 6150)
+
+
+Started POST "/songs/sort_artist" for 127.0.0.1 at 2020-03-27 13:53:25 -0400
+Processing by SongsController#sort_artist as HTML
+  Parameters: {"authenticity_token"=>"hN8z9Yb7cdl41Mmrl2AO9jCnflDrKJt4w7YxzQHjb70XldfaNC/nukblgBVoKPq9HzclwaVzdpoh/0GUN34Xpw=="}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:81:in `sort_by'
+  Rendering songs/index.html.erb within layouts/application
+  Rendered songs/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 48.3ms | ActiveRecord: 0.4ms | Allocations: 5699)
+
+
+Started POST "/songs/sort_title" for 127.0.0.1 at 2020-03-27 13:53:29 -0400
+Processing by SongsController#sort_title as HTML
+  Parameters: {"authenticity_token"=>"ibGz3YBUTWNP4/BPT5eZqTUenTr54U08lSWktUHyOwcypg3Ml5Nt0qouWQwG+9HqyU31TamsKEGPEVYqsSQceA=="}
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:86:in `sort_by'
+  Rendering songs/index.html.erb within layouts/application
+  Rendered songs/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 849)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 0.8ms | Allocations: 5676)
+
+
+Started POST "/songs/add_to_songs" for 127.0.0.1 at 2020-03-27 13:53:57 -0400
+Processing by SongsController#add_to_songs as HTML
+  Parameters: {"authenticity_token"=>"WampiSSyfCrs7wOWYqgu6iqinVKQCcKewf/B3FN6uIbivheYM3VcmwkiqtUrxGap1vH1JcBEp+PbyzNDo6yf+Q==", "artist"=>"the killers", "title"=>"when we were young", "commit"=>"Add Song"}
+Redirected to http://127.0.0.1:3000/songs
+Completed 302 Found in 1105ms (ActiveRecord: 0.0ms | Allocations: 2326)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 13:53:58 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1616)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.9ms | Allocations: 5752)
+
+
+Started POST "/songs/add_to_songs" for 127.0.0.1 at 2020-03-27 13:54:10 -0400
+Processing by SongsController#add_to_songs as HTML
+  Parameters: {"authenticity_token"=>"RIS+rMfQ+6E874a8TP/rcHqLfCin7u/Izd181snpM4r/kwC90BfbENkiL/8Fk6MzhtgUX/ejirXX6Y5JOT8U9Q==", "artist"=>"the killers", "title"=>"when you were young", "commit"=>"Add Song"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "When You Were Young"], ["artist", "The Killers"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:69:in `add_to_songs'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/songs_controller.rb:70:in `add_to_songs'
+  [1m[36mSong Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "songs" WHERE "songs"."title" = ? LIMIT ?[0m  [["title", "When You Were Young"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:70:in `add_to_songs'
+  [1m[36mSong Create (3.7ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "lyrics", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When You Were Young"], ["artist", "The Killers"], ["lyrics", "You sit there in your heartache\r\nWaiting on some beautiful boy to\r\nTo save you from your old ways\r\n\nYou play forgiveness\r\nWatch it now ... here he comes!\nHe doesn't look a thing like Jesus\nBut he talks like a gentleman\nLike you imagined when you were young\n\nCan we climb this mountain\nI don't know\nHigher now than ever before\nI know we can make it if we take it slow\nLet's take it easy\nEasy now, watch it go\n\nWe're burning down the highway skyline\nOn the back of a hurricane that started turning\nWhen you were young\nWhen you were young\n\nAnd sometimes you close your eyes\nand see the place where you used to live\nWhen you were young\n\nThey say the devil's water, it ain't so sweet\nYou don't have to drink right now\nBut you can dip your feet\nEvery once in a little while\n\nYou sit there in your heartache\nWaiting on some beautiful boy to\nTo save you from your old ways\nYou play forgiveness\nWatch it now here he comes\n\nHe doesn't look a thing like Jesus\nBut he talks like a gentleman\nLike you imagined when you were young\n(He talks like a gentlemen, like you imagined when)\nWhen you were young\n\nI said he doesn't look a thing like Jesus\nHe doesn't look a thing like Jesus\nBut more than you'll ever know"], ["created_at", "2020-03-27 17:54:11.009219"], ["updated_at", "2020-03-27 17:54:11.009219"]]
+  ↳ app/controllers/songs_controller.rb:70:in `add_to_songs'
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/songs_controller.rb:70:in `add_to_songs'
+Redirected to http://127.0.0.1:3000/songs
+Completed 302 Found in 528ms (ActiveRecord: 19.3ms | Allocations: 5648)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 13:54:11 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1658)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.5ms | Allocations: 5790)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:54:21 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 4710)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 133ms (Views: 42.7ms | ActiveRecord: 1.3ms | Allocations: 8842)
+
+
+Started GET "/songs/4/1" for 127.0.0.1 at 2020-03-27 13:54:24 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"vcH1XW9LIRaDJB5gbsdJzA81wrcFhxtM2ZfJug0D2IsG1ktMeIwBp2bptyMnqwGP82aqwFXKfjHDozsl/dX/9A==", "id"=>"4", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 236)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 41.8ms | ActiveRecord: 0.5ms | Allocations: 5348)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:54:26 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (5.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 29.8ms | Allocations: 4710)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 45.4ms | ActiveRecord: 7.1ms | Allocations: 8838)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 13:55:11 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1654)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 47.8ms | ActiveRecord: 0.3ms | Allocations: 5770)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:55:23 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 28.7ms | Allocations: 4710)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 54.4ms | ActiveRecord: 1.8ms | Allocations: 8831)
+
+
+Started GET "/songs/1/1" for 127.0.0.1 at 2020-03-27 13:55:36 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"eYcAx26P3XsXT71+tLJh3XNNArRLzzESi0X+E2/9l4rCkL7WeUj9yvKCFD393imejx5qwxuCVG+RcQyMnyuw9Q==", "id"=>"1", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (0.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 239)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 31.1ms | ActiveRecord: 1.1ms | Allocations: 5343)
+
+
+Started GET "/songs/1/1" for 127.0.0.1 at 2020-03-27 13:56:03 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"eYcAx26P3XsXT71+tLJh3XNNArRLzzESi0X+E2/9l4rCkL7WeUj9yvKCFD393imejx5qwxuCVG+RcQyMnyuw9Q==", "id"=>"1", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 239)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 22.6ms | ActiveRecord: 0.9ms | Allocations: 5337)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 13:56:12 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1654)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.5ms | Allocations: 5773)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2020-03-27 13:56:13 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 213)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.2ms | Allocations: 4821)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 13:56:34 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 4710)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 43.0ms | ActiveRecord: 2.2ms | Allocations: 8835)
+
+
+Started GET "/songs/1/1" for 127.0.0.1 at 2020-03-27 13:57:34 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"QANdLctMH2ScyAPC5eLvXQTAbJSpxgTuJ+WuuS54ws37FOM83Is/1XkFqoGsjqce+JME4/mLYZM90Vwm3q7lsg==", "id"=>"1", "playlist_id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (0.8ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 239)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 19.0ms | ActiveRecord: 1.1ms | Allocations: 5347)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2020-03-27 13:57:44 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2368)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 0.7ms | Allocations: 6971)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 14:05:10 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1676)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 49.4ms | ActiveRecord: 0.5ms | Allocations: 5789)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2020-03-27 14:05:11 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (115.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 213)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 130ms (Views: 9.8ms | ActiveRecord: 115.7ms | Allocations: 4845)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 14:05:44 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1654)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.8ms | Allocations: 5764)
+
+
+Started POST "/songs/add_to_songs" for 127.0.0.1 at 2020-03-27 14:06:03 -0400
+Processing by SongsController#add_to_songs as HTML
+  Parameters: {"authenticity_token"=>"Bejao6Mg3/FCYC530cZ7aIsXLuqc3njIK2CvOmlchfPl3SJdew6fuNJeSLMTVAHKQsnE2xGdPB1aNLG4whF5xw==", "artist"=>"crazy town", "title"=>"butterfly", "commit"=>"Add Song"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Butterfly"], ["artist", "Crazy Town"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:69:in `add_to_songs'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/songs_controller.rb:70:in `add_to_songs'
+  [1m[36mSong Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "songs" WHERE "songs"."title" = ? LIMIT ?[0m  [["title", "Butterfly"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:70:in `add_to_songs'
+  [1m[36mSong Create (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "lyrics", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Butterfly"], ["artist", "Crazy Town"], ["lyrics", "Come my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, come-come my lady\r\n\nYou're my butterfly, sugar baby\r\nSuch a sexy, sexy pretty little thing\nFierce nipple pierce you got me sprung with your tongue ring\nAnd I ain't gonna lie cause your loving gets me high\nSo to keep you by my side, there's nothing that I won't try\nButterflies in her eyes and looks to kill\nTime is passing I'm asking, \"Could this be real?\"\nCause I can't sleep I can't hold still\nThe only thing I really know is she got sex appeal\nI can feel, too much is never enough\nYou're always there to lift me up when these times get rough\nI was lost now I'm found ever since you've been around\nYou're the women that I want, so yo, I'm putting it down\n\nCome my lady, come-come my lady\nYou're my butterfly, sugar baby\nCome my lady, you're my pretty baby\nI'll make your legs shake, you make me go crazy\nCome my lady, come-come my lady\nYou're my butterfly, sugar baby\nCome my lady, you're my pretty baby\nI'll make your legs shake, you make me go crazy\n\nI don't deserve you unless it's some kind of hidden message\nTo show me life is precious then I guess it's true\nBut to tell truth, I really never knew 'til I met you\nSee I was lost and confused, twisted and used up\nKnew a better life existed, but thought that I missed it\nMy lifestyle's wild, I was living like a wild child\nTrapped on a short leash paroled the police files\nSo yo, what's happening now?\nI see the sun breaking down into dark clouds\nAnd a vision of you standing out in a crowd, so\n\nCome my lady, come-come my lady\nYou're my butterfly, sugar baby\nCome my lady, you're my pretty baby\nI'll make your legs shake, you make me go crazy\nCome my lady, come-come my lady\nYou're my butterfly, sugar baby\nCome my lady, you're my pretty baby\nI'll make your legs shake, you make me go crazy\n\nHey sugar mama, come and dance with me\nThe smartest thing you ever did was take a chance with me\nWhatever tickles your fancy\nGirl, it's me and you like Sid and Nancy\nSo sexy, almost evil\nTalking 'bout butterflies in my head\nI used to think happy endings were only in the books I read\nBut you made me feel alive when I was almost dead\nYou filled that empty space with the love I used to chase\nAnd as far as I can see it don't get better than this\nSo butterfly, here is a song and it's sealed with a kiss\nAnd a thank you miss\n\nCome and dance with me\nCome and dance with me\nCome and dance with me\nSo come and dance with me\nUh huh, uh huh\n\nCome my lady, come-come my lady\nYou're my butterfly, sugar baby\nCome my lady, you're my pretty baby\nI'll make your legs shake, you make me go crazy\nCome my lady, come-come my lady\nYou're my butterfly, sugar baby\nCome my lady, you're my pretty baby\nI'll make your legs shake, you make me go crazy\nCome my lady, come-come my lady\nYou're my butterfly, sugar baby\nCome my lady, you're my pretty baby\nI'll make your legs shake, you make me go crazy\nCome my lady, come come my lady\nYou're my butterfly, sugar baby\nCome my lady, you're my pretty baby\nI'll make your legs shake, you make me go crazy\n\nCome and dance with me\nCome and dance with me\nCome and dance with me\nCome and dance with me\nCome and dance with me\nCome and dance with me\nCome and dance with me\nCome and dance with me\nCome and dance with me\nCome and dance with me\nCome and dance with me\nCome and dance with me"], ["created_at", "2020-03-27 18:06:03.574307"], ["updated_at", "2020-03-27 18:06:03.574307"]]
+  ↳ app/controllers/songs_controller.rb:70:in `add_to_songs'
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/songs_controller.rb:70:in `add_to_songs'
+Redirected to http://127.0.0.1:3000/songs
+Completed 302 Found in 515ms (ActiveRecord: 3.6ms | Allocations: 5576)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 14:06:03 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1700)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 5830)
+
+
+Started GET "/songs/18" for 127.0.0.1 at 2020-03-27 14:06:07 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 209)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 18.7ms | ActiveRecord: 0.4ms | Allocations: 4823)
+
+
+Started GET "/songs/18/edit" for 127.0.0.1 at 2020-03-27 14:06:12 -0400
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:19:in `edit'
+  Rendering songs/edit.html.erb within layouts/application
+  Rendered songs/edit.html.erb within layouts/application (Duration: 3.5ms | Allocations: 480)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 15.9ms | ActiveRecord: 0.2ms | Allocations: 5085)
+
+
+Started PATCH "/songs/18" for 127.0.0.1 at 2020-03-27 14:06:20 -0400
+Processing by SongsController#update as HTML
+  Parameters: {"authenticity_token"=>"aGnc65Jz6qwz+XR80lxevcA5v5rLGcfYseXjN//xMPPTjwgAlzzoY+BSbweIvfK150/x2gmdqlNqm6+SYwimRA==", "song"=>{"video_url"=>"", "lyrics"=>"Come my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, come-come my lady\r\n\r\nYou're my butterfly, sugar baby\r\nSuch a sexy, sexy pretty little thing\r\nFierce nipple pierce you got me sprung with your tongue ring\r\nAnd I ain't gonna lie cause your loving gets me high\r\nSo to keep you by my side, there's nothing that I won't try\r\nButterflies in her eyes and looks to kill\r\nTime is passing I'm asking, \"Could this be real?\"\r\nCause I can't sleep I can't hold still\r\nThe only thing I really know is she got sex appeal\r\nI can feel, too much is never enough\r\nYou're always there to lift me up when these times get rough\r\nI was lost now I'm found ever since you've been around\r\nYou're the women that I want, so yo, I'm putting it down\r\n\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\n\r\nI don't deserve you unless it's some kind of hidden message\r\nTo show me life is precious then I guess it's true\r\nBut to tell truth, I really never knew 'til I met you\r\nSee I was lost and confused, twisted and used up\r\nKnew a better life existed, but thought that I missed it\r\nMy lifestyle's wild, I was living like a wild child\r\nTrapped on a short leash paroled the police files\r\nSo yo, what's happening now?\r\nI see the sun breaking down into dark clouds\r\nAnd a vision of you standing out in a crowd, so\r\n\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\n\r\nHey sugar mama, come and dance with me\r\nThe smartest thing you ever did was take a chance with me\r\nWhatever tickles your fancy\r\nGirl, it's me and you like Sid and Nancy\r\nSo sexy, almost evil\r\nTalking 'bout butterflies in my head\r\nI used to think happy endings were only in the books I read\r\nBut you made me feel alive when I was almost dead\r\nYou filled that empty space with the love I used to chase\r\nAnd as far as I can see it don't get better than this\r\nSo butterfly, here is a song and it's sealed with a kiss\r\nAnd a thank you miss\r\n\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nSo come and dance with me\r\nUh huh, uh huh\r\n\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\nCome my lady, come come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\n\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me"}, "commit"=>"Update Song", "id"=>"18"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:23:in `update'
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/songs_controller.rb:24:in `update'
+  [1m[36mSong Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "songs" WHERE "songs"."title" = ? AND "songs"."id" != ? LIMIT ?[0m  [["title", "Butterfly"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:24:in `update'
+  [1m[36mSong Update (0.6ms)[0m  [1m[33mUPDATE "songs" SET "lyrics" = ?, "video_url" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["lyrics", "Come my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, come-come my lady\r\n\r\nYou're my butterfly, sugar baby\r\nSuch a sexy, sexy pretty little thing\r\nFierce nipple pierce you got me sprung with your tongue ring\r\nAnd I ain't gonna lie cause your loving gets me high\r\nSo to keep you by my side, there's nothing that I won't try\r\nButterflies in her eyes and looks to kill\r\nTime is passing I'm asking, \"Could this be real?\"\r\nCause I can't sleep I can't hold still\r\nThe only thing I really know is she got sex appeal\r\nI can feel, too much is never enough\r\nYou're always there to lift me up when these times get rough\r\nI was lost now I'm found ever since you've been around\r\nYou're the women that I want, so yo, I'm putting it down\r\n\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\n\r\nI don't deserve you unless it's some kind of hidden message\r\nTo show me life is precious then I guess it's true\r\nBut to tell truth, I really never knew 'til I met you\r\nSee I was lost and confused, twisted and used up\r\nKnew a better life existed, but thought that I missed it\r\nMy lifestyle's wild, I was living like a wild child\r\nTrapped on a short leash paroled the police files\r\nSo yo, what's happening now?\r\nI see the sun breaking down into dark clouds\r\nAnd a vision of you standing out in a crowd, so\r\n\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\n\r\nHey sugar mama, come and dance with me\r\nThe smartest thing you ever did was take a chance with me\r\nWhatever tickles your fancy\r\nGirl, it's me and you like Sid and Nancy\r\nSo sexy, almost evil\r\nTalking 'bout butterflies in my head\r\nI used to think happy endings were only in the books I read\r\nBut you made me feel alive when I was almost dead\r\nYou filled that empty space with the love I used to chase\r\nAnd as far as I can see it don't get better than this\r\nSo butterfly, here is a song and it's sealed with a kiss\r\nAnd a thank you miss\r\n\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nSo come and dance with me\r\nUh huh, uh huh\r\n\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\nCome my lady, come-come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\nCome my lady, come come my lady\r\nYou're my butterfly, sugar baby\r\nCome my lady, you're my pretty baby\r\nI'll make your legs shake, you make me go crazy\r\n\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me\r\nCome and dance with me"], ["video_url", ""], ["updated_at", "2020-03-27 18:06:20.099380"], ["id", 18]]
+  ↳ app/controllers/songs_controller.rb:24:in `update'
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/songs_controller.rb:24:in `update'
+Redirected to http://127.0.0.1:3000/songs/18
+Completed 302 Found in 32ms (ActiveRecord: 12.3ms | Allocations: 4210)
+
+
+Started GET "/songs/18" for 127.0.0.1 at 2020-03-27 14:06:20 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 210)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 10.5ms | ActiveRecord: 0.4ms | Allocations: 4824)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 14:06:21 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (1.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 24.0ms | Allocations: 4757)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 2.6ms | Allocations: 8889)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 14:07:21 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 4710)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 1.4ms | Allocations: 8843)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 14:07:22 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1697)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.6ms | Allocations: 5808)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2020-03-27 14:09:26 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/playlists/index.html.erb:10
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:20
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 1]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 2]]
+  ↳ app/views/playlists/index.html.erb:22
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/index.html.erb:22
+  Rendered playlists/index.html.erb within layouts/application (Duration: 25.1ms | Allocations: 4710)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 1.7ms | Allocations: 9240)
+
+
+Started GET "/playlists/6" for 127.0.0.1 at 2020-03-27 14:09:28 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1446)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.4ms | Allocations: 6060)
+
+
+Started POST "/songs/6/add_to_playlist" for 127.0.0.1 at 2020-03-27 14:09:32 -0400
+Processing by SongsController#add_to_playlist as HTML
+  Parameters: {"authenticity_token"=>"XkrhEWCO2M6L6ZTE7sIkv4tLSLL1Za2MNhmmGPJN1JPu4iocdclQfB8GZI3rOCCixyg1a7pru5bwi3anQQmfsw==", "artist"=>"queen", "title"=>"somebody to love", "commit"=>"Add Song", "playlist_id"=>"6"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:39:in `add_to_playlist'
+  [1m[36mCACHE Song Load (0.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."title" = ? AND "songs"."artist" = ? LIMIT ?[0m  [["title", "Somebody To Love"], ["artist", "Queen"], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:45:in `add_to_playlist'
+  [1m[36mPlaylistSong Load (0.4ms)[0m  [1m[34mSELECT "playlist_songs".* FROM "playlist_songs" WHERE "playlist_songs"."playlist_id" = ? AND "playlist_songs"."song_id" = ? LIMIT ?[0m  [["playlist_id", 6], ["song_id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:46:in `add_to_playlist'
+Redirected to http://127.0.0.1:3000/playlists/6
+Completed 302 Found in 499ms (ActiveRecord: 0.8ms | Allocations: 3450)
+
+
+Started GET "/playlists/6" for 127.0.0.1 at 2020-03-27 14:09:33 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlaylist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/playlists_controller.rb:9:in `show'
+  Rendering playlists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "playlist_songs" ON "songs"."id" = "playlist_songs"."song_id" WHERE "playlist_songs"."playlist_id" = ?[0m  [["playlist_id", 6]]
+  ↳ app/views/playlists/show.html.erb:23
+  Rendered playlists/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 6073)
+
+
+Started GET "/songs/16/6" for 127.0.0.1 at 2020-03-27 15:23:12 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SongsController#show as HTML
+  Parameters: {"authenticity_token"=>"I9nDdofafZf65xRmD7aLQ33f8cSmwHb1ozbNDga+A5GYzn1nkB1dJh8qvSVG2sMAgYyZs/aNE4i5Aj+R9mgk7g==", "id"=>"16", "playlist_id"=>"6"}
+  [1m[36mSong Load (1.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  [1m[36mPlaylist Load (4.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:10:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 12.7ms | Allocations: 239)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 125ms (Views: 77.5ms | ActiveRecord: 5.9ms | Allocations: 5377)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-03-27 15:23:18 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (2.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/songs/index.html.erb:23
+  Rendered songs/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1718)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 2.1ms | Allocations: 5825)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2020-03-27 15:23:20 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 213)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 17.7ms | ActiveRecord: 0.3ms | Allocations: 4821)
+
+
